@@ -76,6 +76,7 @@ resource "yandex_compute_instance" "kc_vm" {
       username = "${chomp(var.kc_vm_username)}",
       ssh_key = "${chomp(var.kc_vm_ssh_key_file)}"
     })
+    serial-port-enable = 1
   }
 
   # Prepare input data for Keycloak VM provisioning script
